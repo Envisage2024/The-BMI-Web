@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fullscreen Gradient Background */
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    background-image: url(../images/ndejje123.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+    justify-content: center;
+    text-align: center;
+    padding-top: 75px; /* Prevents content from hiding behind navbar */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Adjust the opacity as needed */
+    z-index: -1; /* Ensure the overlay is behind the content */
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%; /* Ensures full width */
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    position: fixed; /* Makes it stay at the top */
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    backdrop-filter: blur(5px); /* Glass effect */
+    z-index: 1000;
+}
+
+/* Navigation Menu */
+.menu {
+    width: 100%; /* Ensures full stretch */
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 0 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu ul li a:hover {
+    color: #ffdd57;
+}
+
+/* Main Container */
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 250px;
+}
+
+/* Content Block with Glassmorphism */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container2 {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 300px;
+}
+
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ffdd57;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.btn:hover {
+    background: #ffc107;
+    transform: scale(1.05);
+}
+
+/* Animated Elements */
+.animated-result, .animated-advice {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1 !important;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #f4f4f4;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
+
+/* BMI Info Section */
+.bmi-info {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    margin: 40px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Headings */
+.bmi-info h2 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Paragraph Styling */
+.bmi-info p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* BMI Formula Highlight */
+.bmi-info .formula {
+    font-size: 20px;
+    color: #ffdd57;
+    font-weight: bold;
+}
+
+/* BMI Container */
+.bmi-container {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    margin: 40px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Input Group Styling */
+.input-group {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group input:focus {
+    border-color: #ffdd57;
+}
+
+/* Calculate Button */
+.calculate-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ffdd57;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.calculate-btn:hover {
+    background: #ffc107;
+    transform: scale(1.05);
+}
+
+/* Advice Button */
+#advice-button {
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+#advice-button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Fade-In Animation */
+.fade-in {
+    opacity: 1 !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pic{
+    width: 400px;
+    height: auto;
+    border-radius: 50px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #28a745; /* Green */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.download-btn:hover {
+    background-color: #218838; /* Darker Green */
+    transform: scale(1.05);
+}
+
+/* #health-tips {
+    text-align: center;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    width: 80%;
+    max-width: 600px;
+} */
+
+#daily-tip-text {
+    font-size: 18px;
+    color: white;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.tip-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 15px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    align-items: center;
+}
+
+iframe{
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+/* img{ */
+    /* width: 80%;
+    height: 80%;
+    border-radius: 10%;
+} */
+/* 
+.img small{
+    width: 80%;
+    height: 20%;
+} */
+
+.text1{
+    color: yellow;
+}
+
+.text2{
+    color: rgb(156, 255, 8);
+}
+
+.text3{
+    color: rgb(252, 101, 0);
+}
+
+.text4{
+    color: rgb(255, 0, 0);
+}

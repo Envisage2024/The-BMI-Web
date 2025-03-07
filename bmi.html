@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check BMI - The BMI Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/ndejje.png">
+    <script defer src="script.js"></script>
+</head>
+<body>    
+
+    <div class="main">
+        <div class="navbar">
+            <div class="menu">
+                <ul> 
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bmi.html">Check BMI</a></li>
+                    <li><a href="daily.html">Daily Tip</a></li>
+                    <li><a href="download.html">Download the App</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bmi-container">
+            <img src="images/Levels.png" width="345" height="230">
+        </div>
+        <div class="bmi-container">
+            <h2>Check Your BMI</h2>
+            <div class="input-group">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" placeholder="Enter your height" required>
+            </div>
+            <div class="input-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter your weight" required>
+            </div>
+            <button class="calculate-btn" onclick="calculateBMI()">Calculate BMI</button>
+        
+            <p id="bmi-result"></p>
+            <p id="bmi-advice"></p>
+        
+            <!-- Advice Button (Initially Hidden) -->
+            <a id="advice-button" class="advice-btn" href="#" style="display: none;">Get Personalized Advice</a>
+        </div>
+        
+<script src="javascript/bmi.js"></script>
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="footer">&copy; Envisage 2025. All Rights Reserved. </div>
+
+    </body>
+</html>
